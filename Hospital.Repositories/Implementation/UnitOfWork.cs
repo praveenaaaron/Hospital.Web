@@ -49,10 +49,7 @@ namespace Hospital.Repositories.Implementation
             throw new NotImplementedException();
         }
 
-        public void save()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
 }
