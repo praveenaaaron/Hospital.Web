@@ -67,7 +67,7 @@ namespace Hospital.Utilities
                 }, "Admin@123").GetAwaiter().GetResult();
 
 
-                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@dotnetmastery.com");
+                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "piravienamca12@gmail.com");
                 _userManager.AddToRoleAsync(user,WebSiteRoles.WebSite_Admin).GetAwaiter().GetResult();
 
             }

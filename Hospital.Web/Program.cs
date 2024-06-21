@@ -17,6 +17,7 @@ Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 builder.Services.AddIdentity<IdentityUser,IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+builder.Services.AddRazorPages();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
