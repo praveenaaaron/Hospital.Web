@@ -46,14 +46,18 @@ namespace Hospital.Utilities
 
 
             //create roles if they are not created
-            if (!_roleManager.RoleExistsAsync(WebSiteRoles.WebSite_Admin).GetAwaiter
+            if (!_roleManager.RoleExistsAsync(WebSiteRoles.WebSite_Admin).GetAwaiter
+
 ().GetResult())
             {
-                _roleManager.CreateAsync(new IdentityRole
+                _roleManager.CreateAsync(new IdentityRole
+
 (WebSiteRoles.WebSite_Admin)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole
+                _roleManager.CreateAsync(new IdentityRole
+
 (WebSiteRoles.WebSite_Patient)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole
+                _roleManager.CreateAsync(new IdentityRole
+
 (WebSiteRoles.WebSite_Doctor)).GetAwaiter().GetResult();
 
 
