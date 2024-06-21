@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Hospital.Utilities;
 using Hospital.Repositories.Implementation;
 using Hospital.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddIdentity<IdentityUser,IdentityRole>()
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
