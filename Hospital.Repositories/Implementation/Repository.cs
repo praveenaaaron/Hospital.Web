@@ -99,25 +99,7 @@ _context.Entry(entity).State= EntityState.Modified;
             return entity;
         }
 
-        public T GetByid(object id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> GetByAsync(object id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteAdd(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> DeleteAddAsync(T entity)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
 }

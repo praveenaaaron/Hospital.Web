@@ -38,16 +38,13 @@ namespace Hospital.Repositories.Implementation
             IRepository<T> repo = new Repository<T>(_context);
             return repo;
         }
-        public void save()
+        public void Save()
         {
             _context.SaveChanges();
     
     }
 
-        public IRepository<T> repository<T>() where T : class
-        {
-            throw new NotImplementedException();
-        }
+        
 
       
     }

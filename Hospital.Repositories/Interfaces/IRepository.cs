@@ -11,14 +11,14 @@ namespace Hospital.Repositories.Interfaces
    
     {
         IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null);
-        T GetByid(object id);
-        Task<T> GetByAsync(object id);
+        T GetById(object id);
+       // Task<T> GetByAsync(object id);
         void Add(T entity);
         Task<T> AddAsync(T entity);
         void Update(T entity);
         Task<T> UpdateAsync(T entity);
-        void DeleteAdd(T entity);
-        Task<T> DeleteAddAsync(T entity);
+        void Delete(T entity);
+       // Task<T> DeleteAddAsync(T entity);
 
     }
 }
