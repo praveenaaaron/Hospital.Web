@@ -16,6 +16,15 @@ namespace Hospital.Utilities
         public int PageNumber { get; set; }
         public int PageSize { get; set; }
 
+        public static implicit operator PagedResult<T>(PagedResult<Hospital.ViewModels.HospitalInfoViewModel> v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static implicit operator PagedResult<T>(PagedResult<Hospital.ViewModels.HospitalInfoViewModel> v)
+        {
+            throw new NotImplementedException();
+        }
     }
    
 }
