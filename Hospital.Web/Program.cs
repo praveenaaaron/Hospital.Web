@@ -6,6 +6,9 @@ using Hospital.Repositories.Implementation;
 using Hospital.Repositories.Interfaces;
 using Microsoft.AspNetCore.Identity.UI.Services;
 
+using Hospital.Services;
+using Hospital.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,6 +24,7 @@ builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddTransient<IHospitalInfo, HospitalInfoServices>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -39,7 +43,7 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{area=Patient}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=admin}/{controller=Hospitals}/{action=Index}/{id?}");
 
 app.Run();
 void SeedDatabase()

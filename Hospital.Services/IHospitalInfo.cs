@@ -9,7 +9,7 @@ using Hospital.Utilities;
 
 namespace Hospital.Services
 {
-    internal interface IHospitalInfo
+    public  interface IHospitalInfo
     {
         PagedResult<HospitalInfoViewModel> GetAll(int pageNumber, int pageSize);
         HospitalInfoViewModel GetHospitalById(int HospitalID);
