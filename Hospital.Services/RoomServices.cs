@@ -42,7 +42,7 @@ namespace Hospital.Services
                 throw;
 
             }
-            var result = new PagedResult<HospitalInfoViewModel>
+            var result = new PagedResult<RoomViewModel>
             {
                 Data = vmList,
                 TotalItems = totalCount,
